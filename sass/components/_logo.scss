@@ -1,0 +1,27 @@
+// .logo {
+//   .footer {
+//     margin-bottom: 20px;
+//     margin-right: 0;
+//     color: var(--primary-white-color);
+//   }
+// }
+
+.logo__word_color {
+  color: var(--accent-color);
+}
+
+.logo {
+  margin-right: 92px;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo_inverse {
+  color: var(--primary-white-color);
+}
