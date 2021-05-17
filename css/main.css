@@ -251,20 +251,6 @@ img {
   margin-right: 0;
 }
 
-.mobile-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  z-index: 2;
-}
-
-@media screen and (min-width: 768px) {
-  .mobile-menu {
-    display: none;
-  }
-}
-
 .mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
@@ -276,7 +262,10 @@ img {
   top: 0;
   left: 50%;
   width: 100vw;
-  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
   height: 100vh;
   transform: translateX(-50%);
   padding: 48px 40px;
@@ -284,6 +273,12 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .mobile-menu__close {
@@ -495,6 +490,15 @@ img {
   font-size: 12px;
   line-height: 1.17;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form__desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1177,12 +1181,16 @@ img {
   margin-right: 8px;
 }
 
+.card-set {
+  margin-bottom: -30px;
+}
+
 @media screen and (min-width: 768px) {
   .card-set {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px;
-    margin-top: -15px;
+    margin-left: -30px;
+    margin-top: -30px;
   }
 }
 
@@ -1195,10 +1203,14 @@ img {
   }
 }
 
+.card-set__item {
+  margin-bottom: 30px;
+}
+
 @media screen and (min-width: 768px) {
   .card-set__item {
-    margin-left: 15px;
-    margin-top: 15px;
+    margin-left: 30px;
+    margin-top: 30px;
     flex-basis: calc((100% - 30px) / 2);
   }
 }
@@ -1280,7 +1292,6 @@ img {
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
-    flex-basis: calc((100% - 30px) / 2);
   }
 }
 
@@ -1310,11 +1321,9 @@ img {
 
 @media screen and (min-width: 1200px) {
   .team-list__item {
-    height: 250px;
     margin-left: 30px;
     margin-top: 30px;
     flex-basis: calc((100% - 120px) / 4);
-    height: 250px;
   }
 }
 
@@ -1325,7 +1334,7 @@ img {
 }
 
 .team-list__title {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
