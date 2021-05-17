@@ -11,8 +11,6 @@
 }
 
 .logo {
-  margin-right: 92px;
-
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -20,8 +18,16 @@
 
   text-decoration: none;
   color: #000000;
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 92px;
+  }
 }
 
 .logo_inverse {
   color: var(--primary-white-color);
+  margin-right: 0;
 }

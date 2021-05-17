@@ -17,14 +17,19 @@
     <header class="header">
         <div class="container header__container">
             <nav class="navigation header__navigation">
-                <a class="logo header__logo" href="./index.html"><span class="header__logo_text_color">Web</span>Studio</a>
+                <a class="logo header__logo" href="./index.html"><span class="logo__word_color">Web</span>Studio</a>
                 <ul class="site-nav header__site-nav list">
-                    <li class="site-nav__item"><a class="site-nav__link link"
+                    <li class="site-nav__item"><a class="site-nav__link link "
                             href="./index.html">Студия</a></li>
                     <li class="site-nav__item"><a class="site-nav__link link site-nav__link_current" href="./portfolio.html">Портфолио</a></li>
                     <li class="site-nav__item"><a class="site-nav__link link" href="">Контакты</a></li>
                 </ul>
             </nav>
+            <button type="button" class="header__mobile-menu-btn" data-menu-button>
+                <svg class="header__mobile-menu-icon">
+                    <use href="./images/sprite.svg#burger"></use>
+                </svg>
+            </button>
             <ul class="our-contacts header__our-contacts list">
                 <li class="our-contacts__item">
                     <a class="our-contacts__link link" href="mailto:info@devstudio.com">
@@ -43,6 +48,52 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="mobile-menu" data-menu>
+            <button class="mobile-menu__close" data-menu-close>
+                <svg class="mobile-menu__close-icon">
+                    <use href="./images/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <nav class="mobile-menu-navigation">
+                <ul class="mobile-menu-site-nav__list list">
+                    <li class="mobile-menu-site-nav__item">
+                        <a href="./index.html" class="mobile-menu-site-nav__link link">Студия</a>
+                    </li>
+                    <li class="mobile-menu-site-nav__item">
+                        <a href="./portfolio.html" class="mobile-menu-site-nav__link link mobile-menu-site-nav__link_current">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu-site-nav__item">
+                        <a href="" class="mobile-menu-site-nav__link link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-bottom">
+                <ul class="mobile-menu-our-contacts list">
+                    <li class="mobile-menu-our-contacts__item">
+                        <a class="mobile-menu-our-contacts__link mobile-menu-our-contacts__link_text_big link"
+                            href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mobile-menu-our-contacts__item">
+                        <a class="mobile-menu-our-contacts__link link"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-menu-social-list list">
+                    <li class="mobile-menu-social-list__item">
+                        <a class="mobile-menu-social-list__link link" href="">Instagram</a>
+                    </li>
+                    <li class="mobile-menu-social-list__item">
+                        <a class="mobile-menu-social-list__link link" href="">Twitter</a>
+                    </li>
+                    <li class="mobile-menu-social-list__item">
+                        <a class="mobile-menu-social-list__link link" href="">Facebook</a>
+                    </li>
+                    <li class="mobile-menu-social-list__item">
+                        <a class="mobile-menu-social-list__link link" href="">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -68,7 +119,25 @@
                     <li class="card-set__item item">
                         <a class="project link" href="">
                             <div class="project__box">
-                                <img class="project__image" src="./images/portfolio/technocrack.jpg" width="370" height="294" alt="Технокряк">  
+                               
+                                <picture>
+                                    <source srcset="./images/portfolio/project1.webp 1x, ./images/portfolio/project1@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="./images/portfolio/project1.jpg 1x, ./images/portfolio/project1@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                
+                                    <source srcset="./images/portfolio/project-tablet1.webp 1x, ./images/portfolio/project-tablet1@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="./images/portfolio/project-tablet1.jpg 1x, ./images/portfolio/project-tablet1@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                
+                                    <source srcset="./images/portfolio/project-mobile1.webp 1x, ./images/portfolio/project-mobile1@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source srcset="./images/portfolio/project-mobile1.jpg 1x, ./images/portfolio/project-mobile1@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                
+                                    <img class="project__image" src="./images/portfolio/project-mobile1.jpg" alt="Технокряк">
+                                </picture>
                                 <p class="project__subtitle">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>      
                             </div>                                            
                             <div class="project__content">
@@ -79,7 +148,25 @@
                     </li>
                     <li class="card-set__item">
                         <a class="project link" href="">
-                            <img class="project__image" src="./images/portfolio/poster_nba.jpg" width="370" height="294" alt="Постер">
+                            
+                            <picture>
+                                <source srcset="./images/portfolio/project2.webp 1x, ./images/portfolio/project2@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/project2.jpg 1x, ./images/portfolio/project2@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/portfolio/project-tablet2.webp 1x, ./images/portfolio/project-tablet2@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-tablet2.jpg 1x, ./images/portfolio/project-tablet2@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/portfolio/project-mobile2.webp 1x, ./images/portfolio/project-mobile2@2x.webp 2x"
+                                    media="(min-width: 480px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-mobile2.jpg 1x, ./images/portfolio/project-mobile2@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                            
+                                <img class="project__image" src="./images/portfolio/project-mobile2.jpg" alt="Постер">
+                            </picture>
                             <div class="project__content">
                                 <h2 class="project__title">Постер New Orlean vs Golden Star</h2>
                                 <p class="project__text">Дизайн</p>
@@ -88,7 +175,24 @@
                     </li>
                     <li class="card-set__item">
                         <a class="project link" href="">
-                            <img class="project__image" src="./images/portfolio/restaurant_seafood.jpg" width="370" height="294" alt="Логотип ресторана">
+                            <picture>
+                                <source srcset="./images/portfolio/project3.webp 1x, ./images/portfolio/project3@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/project3.jpg 1x, ./images/portfolio/project3@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/portfolio/project-tablet3.webp 1x, ./images/portfolio/project-tablet3@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-tablet3.jpg 1x, ./images/portfolio/project-tablet3@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/portfolio/project-mobile3.webp 1x, ./images/portfolio/project-mobile3@2x.webp 2x"
+                                    media="(min-width: 480px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-mobile3.jpg 1x, ./images/portfolio/project-mobile3@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                            
+                                <img class="project__image" src="./images/portfolio/project-mobile3.jpg" alt="Логотип ресторана">
+                            </picture>
                             <div class="project__content">
                                 <h2 class="project__title">Ресторан Seafood</h2>
                                 <p class="project__text">Приложение</p>
@@ -97,7 +201,24 @@
                     </li>
                     <li class="card-set__item">
                         <a class="project link" href="">
-                            <img class="project__image" src="./images/portfolio/headphones.jpg" width="370" height="294" alt="Нвушники">
+                            <picture>
+                                <source srcset="./images/portfolio/project4.webp 1x, ./images/portfolio/project4@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/project4.jpg 1x, ./images/portfolio/project4@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/portfolio/project-tablet4.webp 1x, ./images/portfolio/project-tablet4@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-tablet4.jpg 1x, ./images/portfolio/project-tablet4@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/portfolio/project-mobile4.webp 1x, ./images/portfolio/project-mobile4@2x.webp 2x"
+                                    media="(min-width: 480px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-mobile4.jpg 1x, ./images/portfolio/project-mobile4@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                            
+                                <img class="project__image" src="./images/portfolio/project-mobile4.jpg" alt="Наушники">
+                            </picture>
                             <div class="project__content">
                                 <h2 class="project__title">Проект Prime</h2>
                                 <p class="project__text">Маркетинг</p>
@@ -106,7 +227,24 @@
                     </li>
                     <li class="card-set__item">
                         <a class="project link" href="">
-                            <img class="project__image" src="./images/portfolio/boxes.jpg" width="370" height="294" alt="Коробки">
+                            <picture>
+                                <source srcset="./images/portfolio/project5.webp 1x, ./images/portfolio/project5@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/project5.jpg 1x, ./images/portfolio/project5@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/portfolio/project-tablet5.webp 1x, ./images/portfolio/project-tablet5@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-tablet5.jpg 1x, ./images/portfolio/project-tablet5@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/portfolio/project-mobile5.webp 1x, ./images/portfolio/project-mobile5@2x.webp 2x"
+                                    media="(min-width: 480px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-mobile5.jpg 1x, ./images/portfolio/project-mobile5@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                            
+                                <img class="project__image" src="./images/portfolio/project-mobile5.jpg" alt="Коробки">
+                            </picture>
                             <div class="project__content">
                                 <h2 class="project__title">Проект Boxes</h2>
                                 <p class="project__text">Приложение</p>
@@ -115,7 +253,24 @@
                     </li>
                     <li class="card-set__item">
                         <a class="project link" href="">
-                            <img class="project__image" src="./images/portfolio/monitor.jpg" width="370" height="294" alt="Монитор">
+                            <picture>
+                                <source srcset="./images/portfolio/project6.webp 1x, ./images/portfolio/project6@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/project6.jpg 1x, ./images/portfolio/project6@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/portfolio/project-tablet6.webp 1x, ./images/portfolio/project-tablet6@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-tablet6.jpg 1x, ./images/portfolio/project-tablet6@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/portfolio/project-mobile6.webp 1x, ./images/portfolio/project-mobile6@2x.webp 2x"
+                                    media="(min-width: 480px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-mobile6.jpg 1x, ./images/portfolio/project-mobile6@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                            
+                                <img class="project__image" src="./images/portfolio/project-mobile6.jpg" alt="Монитор">
+                            </picture>
                             <div class="project__content">
                                 <h2 class="project__title">Inspiration has no Borders</h2>
                                 <p class="project__text">Веб-сайт</p>
@@ -124,7 +279,24 @@
                     </li>
                     <li class="card-set__item">
                         <a class="project link" href="">
-                            <img class="project__image" src="./images/portfolio/magazine.jpg" width="370" height="294" alt="Журнал">
+                            <picture>
+                                <source srcset="./images/portfolio/project7.webp 1x, ./images/portfolio/project7@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/project7.jpg 1x, ./images/portfolio/project7@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/portfolio/project-tablet7.webp 1x, ./images/portfolio/project-tablet7@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-tablet7.jpg 1x, ./images/portfolio/project-tablet7@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/portfolio/project-mobile7.webp 1x, ./images/portfolio/project-mobile7@2x.webp 2x"
+                                    media="(min-width: 480px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-mobile7.jpg 1x, ./images/portfolio/project-mobile7@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                            
+                                <img class="project__image" src="./images/portfolio/project-mobile7.jpg" alt="Журнал">
+                            </picture>
                             <div class="project__content">
                                 <h2 class="project__title">Издание Limited Edition</h2>
                                 <p class="project__text">Дизайн</p>
@@ -133,7 +305,24 @@
                     </li>
                     <li class="card-set__item">
                         <a class="project link" href="">
-                            <img class="project__image" src="./images/portfolio/label.jpg" width="370" height="294" alt="Label">
+                            <picture>
+                                <source srcset="./images/portfolio/project8.webp 1x, ./images/portfolio/project8@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/project8.jpg 1x, ./images/portfolio/project8@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/portfolio/project-tablet8.webp 1x, ./images/portfolio/project-tablet8@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-tablet8.jpg 1x, ./images/portfolio/project-tablet8@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/portfolio/project-mobile8.webp 1x, ./images/portfolio/project-mobile8@2x.webp 2x"
+                                    media="(min-width: 480px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-mobile8.jpg 1x, ./images/portfolio/project-mobile8@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                            
+                                <img class="project__image" src="./images/portfolio/project-mobile8.jpg" alt="Label">
+                            </picture>
                             <div class="project__content">
                                 <h2 class="project__title">Проект LAB</h2>
                                 <p class="project__text">Маркетинг</p>
@@ -142,7 +331,24 @@
                     </li>
                     <li class="card-set__item">
                         <a class="project link" href="">
-                            <img class="project__image" src="./images/portfolio/growing_business.jpg" width="370" height="294" alt="Развитие бизнеса">
+                            <picture>
+                                <source srcset="./images/portfolio/project9.webp 1x, ./images/portfolio/project9@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/project9.jpg 1x, ./images/portfolio/project9@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/portfolio/project-tablet9.webp 1x, ./images/portfolio/project-tablet9@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-tablet9.jpg 1x, ./images/portfolio/project-tablet9@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/portfolio/project-mobile9.webp 1x, ./images/portfolio/project-mobile9@2x.webp 2x"
+                                    media="(min-width: 480px)" type="image/webp">
+                                <source srcset="./images/portfolio/project-mobile9.jpg 1x, ./images/portfolio/project-mobile9@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                            
+                                <img class="project__image" src="./images/portfolio/project-mobile9.jpg" alt="Развитие бизнеса">
+                            </picture>
                             <div class="project__content">
                                 <h2 class="project__title">Growing Business</h2>
                                 <p class="project__text">Приложение</p>
@@ -220,6 +426,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
+
 </body>
 
 </html>

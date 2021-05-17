@@ -1,15 +1,19 @@
 .our-contacts__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
   &:hover,
   &:focus {
@@ -30,7 +34,9 @@
 }
 
 .our-contacts__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
 }
 
 .our-contacts__link:hover,
